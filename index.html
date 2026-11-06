@@ -172,9 +172,19 @@
       }
       .down {
         position: absolute;
+        left: 50%;
         bottom: 28px;
+        width: 18px;
+        height: 18px;
+        margin-left: -9px;
         color: #777;
         animation: float 2s infinite;
+      }
+      .arrow {
+        width: 15px;
+        height: 15px;
+        display: block;
+        flex: none;
       }
       @keyframes float {
         50% {
@@ -392,14 +402,20 @@
         line-height: 1.7;
       }
       .button {
-        display: inline-block;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
         margin-top: 18px;
-        padding: 15px 25px;
+        padding: 15px 22px 15px 24px;
         border-radius: 999px;
         background: var(--text);
         color: #111;
         text-decoration: none;
         font-weight: 600;
+      }
+      .button .arrow {
+        width: 13px;
+        height: 13px;
       }
       .button:hover {
         background: var(--orange);
@@ -522,7 +538,7 @@
         .trace span {
           color: #8d939a;
         }
-        .trace i {
+        .trace .arrow {
           display: none;
         }
       }
@@ -550,6 +566,18 @@
     </style>
   </head>
   <body>
+    <svg width="0" height="0" aria-hidden="true" style="position: absolute">
+      <symbol id="arrow-ne" viewBox="0 0 16 16">
+        <path
+          d="M4.25 11.75 L11.75 4.25 M7.25 4.25 H11.75 V8.75"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.6"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </symbol>
+    </svg>
     <div class="progress"></div>
     <nav class="nav" id="nav">
       <a href="#top" class="brand">BuildSparks<span class="dot">.</span></a>
@@ -579,7 +607,16 @@
           matters is what you choose to build from it.
         </p>
       </div>
-      <div class="down">↓</div>
+      <svg class="down" viewBox="0 0 16 16" aria-hidden="true">
+        <path
+          d="M8 3.25 V12.25 M4.25 8.75 L8 12.5 L11.75 8.75"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.6"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
     </header>
     <section id="journey">
       <div class="wrap">
@@ -643,11 +680,36 @@
           </h2>
         </div>
         <div class="trace">
-          <div class="reveal"><span>01</span><b>A question</b><i>↗</i></div>
-          <div class="reveal"><span>02</span><b>An experiment</b><i>↗</i></div>
-          <div class="reveal"><span>03</span><b>A project</b><i>↗</i></div>
-          <div class="reveal"><span>04</span><b>A passion</b><i>↗</i></div>
-          <div class="reveal"><span>05</span><b>A direction</b><i>↗</i></div>
+          <div class="reveal">
+            <span>01</span><b>A question</b
+            ><svg class="arrow" aria-hidden="true">
+              <use href="#arrow-ne" />
+            </svg>
+          </div>
+          <div class="reveal">
+            <span>02</span><b>An experiment</b
+            ><svg class="arrow" aria-hidden="true">
+              <use href="#arrow-ne" />
+            </svg>
+          </div>
+          <div class="reveal">
+            <span>03</span><b>A project</b
+            ><svg class="arrow" aria-hidden="true">
+              <use href="#arrow-ne" />
+            </svg>
+          </div>
+          <div class="reveal">
+            <span>04</span><b>A passion</b
+            ><svg class="arrow" aria-hidden="true">
+              <use href="#arrow-ne" />
+            </svg>
+          </div>
+          <div class="reveal">
+            <span>05</span><b>A direction</b
+            ><svg class="arrow" aria-hidden="true">
+              <use href="#arrow-ne" />
+            </svg>
+          </div>
         </div>
       </div>
     </section>
@@ -710,7 +772,12 @@
           Notice it. Follow it. Build on it. The next chapter rarely announces
           itself. Sometimes it begins as a question you cannot stop asking.
         </p>
-        <a class="button" href="#top">Begin again ↗</a>
+        <a class="button" href="#top"
+          >Begin again
+          <svg class="arrow" aria-hidden="true">
+            <use href="#arrow-ne" />
+          </svg>
+        </a>
       </div>
     </section>
     <footer>
