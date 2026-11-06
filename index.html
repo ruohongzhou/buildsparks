@@ -28,6 +28,7 @@
       }
       html {
         scroll-behavior: smooth;
+        scroll-padding-top: 72px;
       }
       body {
         margin: 0;
@@ -57,7 +58,29 @@
         right: 0;
         display: flex;
         justify-content: space-between;
-        padding: 22px 5vw;
+        padding: 22px 5vw 28px;
+      }
+      .nav::after {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        left: 0;
+        right: 0;
+        top: 0;
+        height: 92px;
+        pointer-events: none;
+        background: linear-gradient(
+          to bottom,
+          rgba(9, 11, 13, 0.94) 30%,
+          rgba(9, 11, 13, 0)
+        );
+      }
+      .nav.on-paper::after {
+        background: linear-gradient(
+          to bottom,
+          rgba(240, 236, 227, 0.96) 30%,
+          rgba(240, 236, 227, 0)
+        );
       }
       .brand {
         font-weight: 600;
@@ -261,9 +284,16 @@
       .trace div:last-child {
         border-bottom: 1px solid #ffffff18;
       }
-      .trace div:hover {
-        color: var(--orange);
-        padding-left: 10px;
+      @media (hover: hover) and (pointer: fine) {
+        .trace div:hover {
+          color: var(--orange);
+          padding-left: 10px;
+        }
+        .pill:hover {
+          transform: scale(1.07);
+          border-color: #ff7a1a99;
+          color: #fff;
+        }
       }
       .trace b {
         font-size: 34px;
@@ -308,10 +338,11 @@
         transition: 0.3s;
         backdrop-filter: blur(8px);
       }
-      .pill:hover {
-        transform: scale(1.07);
-        border-color: #ff7a1a99;
-        color: #fff;
+      .step p,
+      .copy,
+      .paper-copy,
+      .final p {
+        text-wrap: pretty;
       }
       .p1 {
         left: 5%;
@@ -406,12 +437,12 @@
         .journey:before {
           left: 10px;
         }
-        .step,
+        .step:nth-child(odd),
         .step:nth-child(even) {
           width: 100%;
           margin-left: 0;
           text-align: left;
-          padding: 0 0 80px 50px;
+          padding: 0 0 72px 46px;
         }
         .step:nth-child(odd):before,
         .step:nth-child(even):before {
@@ -422,26 +453,77 @@
           font-size: 42px;
         }
         .constellation {
-          height: 650px;
+          height: 560px;
         }
         .pill {
-          font-size: 12px;
+          font-size: 13px;
+          padding: 11px 14px;
+        }
+        .p1 {
+          left: 0;
+          top: 22%;
         }
         .p2 {
-          left: 58%;
+          left: auto;
+          right: 0;
+          top: 14%;
+        }
+        .p3 {
+          left: 0;
+          top: 70%;
         }
         .p4 {
-          left: 60%;
+          left: auto;
+          right: 0;
+          top: 62%;
+        }
+        .p5 {
+          left: 34%;
+          top: 2%;
         }
         .p6 {
-          left: 40%;
+          left: 27%;
+          top: 82%;
+        }
+        .p7 {
+          left: 0;
+          top: 44%;
         }
         .p8 {
-          left: 52%;
+          left: auto;
+          right: 0;
+          top: 38%;
         }
         footer {
           flex-direction: column;
           gap: 10px;
+        }
+        .section-title {
+          font-size: clamp(2.3rem, 12.2vw, 3rem);
+        }
+        /* Keep "achievements." on one line, and scale down before the word would split. */
+        .paper .section-title {
+          font-size: clamp(2.55rem, 13vw, 3.2rem);
+          line-height: 0.94;
+          letter-spacing: -0.06em;
+        }
+        #journey .section-title .serif {
+          display: block;
+        }
+        .final .display {
+          font-size: min(2.85rem, 11.2vw);
+          line-height: 0.98;
+        }
+        /* These rows are a sequence, not a menu. The arrow stays on the button. */
+        .trace div {
+          grid-template-columns: 2.15rem 1fr;
+          padding: 18px 0;
+        }
+        .trace span {
+          color: #8d939a;
+        }
+        .trace i {
+          display: none;
         }
       }
 
