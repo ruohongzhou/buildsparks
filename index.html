@@ -1,15 +1,666 @@
-<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#090b0d"><title>BuildSparks | Build on your spark.</title><meta name="description" content="Every meaningful journey begins with a flicker of curiosity. What matters is what you choose to build from it."><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet"><style>
-:root{--bg:#090b0d;--text:#f5f3ef;--muted:#92979d;--orange:#ff7a1a;--paper:#f0ece3}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:"DM Sans",sans-serif;overflow-x:hidden}::selection{background:var(--orange);color:#000}.progress{position:fixed;z-index:99;top:0;left:0;height:2px;background:var(--orange);width:0}.nav{position:fixed;z-index:50;top:0;left:0;right:0;display:flex;justify-content:space-between;padding:22px 5vw}.brand{font-weight:600}.dot{display:inline-block;color:var(--orange);font-size:1.15em;line-height:1;vertical-align:-.015em;margin-left:.10em;opacity:1;text-shadow:0 0 9px #ff7a1acc,0 0 2px #ffb36f}.nav a{color:#fff;text-decoration:none;transition:color .25s ease}.nav.on-paper a{color:#111315}.nav.on-paper .dot{color:var(--orange);text-shadow:0 0 9px #ff7a1acc,0 0 2px #ffb36f}.navlinks{display:flex;gap:28px;font-size:12px;letter-spacing:.12em;text-transform:uppercase}.hero{min-height:100vh;display:grid;place-items:center;text-align:center;padding:90px 6vw;position:relative}.glow{position:absolute;width:280px;height:280px;background:#ff7a1a33;filter:blur(100px);border-radius:50%}.spark{width:10px;height:10px;border-radius:50%;background:var(--orange);box-shadow:0 0 28px 10px #ff7a1a55;margin:0 auto 38px}.eyebrow{font-size:14px;font-weight:500;text-transform:uppercase;letter-spacing:.22em;color:#a9adb2}.hero h1,.display{font-size:clamp(4.2rem,10vw,9.5rem);line-height:.84;letter-spacing:-.065em;margin:22px 0;font-weight:500}.serif{font-family:"Instrument Serif",serif;font-style:italic;color:#ff9147;font-weight:400}.hero p{max-width:570px;margin:34px auto;color:var(--muted);font-size:18px;line-height:1.7}.down{position:absolute;bottom:28px;color:#777;animation:float 2s infinite}@keyframes float{50%{transform:translateY(8px)}}section{padding:150px 7vw}.wrap{max-width:1180px;margin:auto}.section-title{font-size:clamp(3rem,7vw,7rem);line-height:1;letter-spacing:-.055em;font-weight:300;max-width:1000px}.orange{color:#ff9147}.journey{position:relative;margin-top:100px}.journey:before{content:"";position:absolute;left:50%;top:0;bottom:0;width:1px;background:linear-gradient(var(--orange),#ffffff33,transparent)}.step{width:50%;padding:10px 70px 100px;position:relative}.step:nth-child(even){margin-left:50%}.step:nth-child(odd){text-align:right}.step:before{content:"";position:absolute;width:11px;height:11px;border:1px solid var(--orange);background:var(--bg);border-radius:50%;top:18px;box-shadow:0 0 15px #ff7a1a88}.step:nth-child(odd):before{right:-6px}.step:nth-child(even):before{left:-6px}.step small{color:#555}.step h3{font-size:56px;margin:8px 0;font-weight:400;letter-spacing:-.04em}.step p{color:var(--muted);line-height:1.65;font-size:16px}.split{background:#ffffff07;border-top:1px solid #ffffff14;border-bottom:1px solid #ffffff14}.grid2{display:grid;grid-template-columns:1fr 1fr;gap:90px;align-items:end}.copy{color:var(--muted);font-size:21px;line-height:1.75}.trace{max-width:760px;margin:90px auto 0}.trace div{border-top:1px solid #ffffff18;padding:25px 0;display:grid;grid-template-columns:70px 1fr auto;align-items:center;transition:.3s}.trace div:last-child{border-bottom:1px solid #ffffff18}.trace div:hover{color:var(--orange);padding-left:10px}.trace b{font-size:34px;font-weight:400}.trace span{color:#666;font-size:13px}.paper{background:var(--paper);color:#111315}.paper .section-title{font-size:clamp(4rem,8vw,8rem)}.paper-copy{max-width:620px;margin:70px 0 0 auto;color:#555;font-size:21px;line-height:1.75}.constellation{height:560px;position:relative;margin-top:40px}.path{position:absolute;inset:0;width:100%;height:100%}.pill{position:absolute;border:1px solid #ffffff1c;background:#ffffff0a;padding:13px 18px;border-radius:999px;color:#bbb;transition:.3s;backdrop-filter:blur(8px)}.pill:hover{transform:scale(1.07);border-color:#ff7a1a99;color:#fff}.p1{left:5%;top:23%}.p2{left:72%;top:13%}.p3{left:17%;top:68%}.p4{left:78%;top:68%}.p5{left:45%;top:12%}.p6{left:52%;top:77%}.p7{left:4%;top:47%}.p8{left:70%;top:43%}.final{min-height:100vh;display:grid;place-items:center;text-align:center;border-top:1px solid #ffffff14;position:relative}.final p{max-width:560px;margin:32px auto;color:var(--muted);font-size:18px;line-height:1.7}.button{display:inline-block;margin-top:18px;padding:15px 25px;border-radius:999px;background:var(--text);color:#111;text-decoration:none;font-weight:600}.button:hover{background:var(--orange)}footer{border-top:1px solid #ffffff14;padding:30px 5vw;display:flex;justify-content:space-between;color:#92979d;font-size:14px}.reveal{opacity:0;transform:translateY(30px);transition:opacity .9s,transform .9s}.reveal.on{opacity:1;transform:none}@media(max-width:720px){.navlinks{display:none}section{padding:110px 7vw}.grid2{grid-template-columns:1fr;gap:30px}.journey:before{left:10px}.step,.step:nth-child(even){width:100%;margin-left:0;text-align:left;padding:0 0 80px 50px}.step:nth-child(odd):before,.step:nth-child(even):before{left:5px;right:auto}.step h3{font-size:42px}.constellation{height:650px}.pill{font-size:12px}.p2{left:58%}.p4{left:60%}.p6{left:40%}.p8{left:52%}footer{flex-direction:column;gap:10px}}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#090b0d" />
+    <title>BuildSparks | Build on your spark.</title>
+    <meta
+      name="description"
+      content="Every meaningful journey begins with a flicker of curiosity. What matters is what you choose to build from it."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=Instrument+Serif:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #090b0d;
+        --text: #f5f3ef;
+        --muted: #92979d;
+        --orange: #ff7a1a;
+        --paper: #f0ece3;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--text);
+        font-family: "DM Sans", sans-serif;
+        overflow-x: hidden;
+      }
+      ::selection {
+        background: var(--orange);
+        color: #000;
+      }
+      .progress {
+        position: fixed;
+        z-index: 99;
+        top: 0;
+        left: 0;
+        height: 2px;
+        background: var(--orange);
+        width: 0;
+      }
+      .nav {
+        position: fixed;
+        z-index: 50;
+        top: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: space-between;
+        padding: 22px 5vw;
+      }
+      .brand {
+        font-weight: 600;
+      }
+      .dot {
+        display: inline-block;
+        color: var(--orange);
+        font-size: 1.15em;
+        line-height: 1;
+        vertical-align: -0.015em;
+        margin-left: 0.1em;
+        opacity: 1;
+        text-shadow:
+          0 0 9px #ff7a1acc,
+          0 0 2px #ffb36f;
+      }
+      .nav a {
+        color: #fff;
+        text-decoration: none;
+        transition: color 0.25s ease;
+      }
+      .nav.on-paper a {
+        color: #111315;
+      }
+      .nav.on-paper .dot {
+        color: var(--orange);
+        text-shadow:
+          0 0 9px #ff7a1acc,
+          0 0 2px #ffb36f;
+      }
+      .navlinks {
+        display: flex;
+        gap: 28px;
+        font-size: 12px;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+      .hero {
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        text-align: center;
+        padding: 90px 6vw;
+        position: relative;
+      }
+      .glow {
+        position: absolute;
+        width: 280px;
+        height: 280px;
+        background: #ff7a1a33;
+        filter: blur(100px);
+        border-radius: 50%;
+      }
+      .spark {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: var(--orange);
+        box-shadow: 0 0 28px 10px #ff7a1a55;
+        margin: 0 auto 38px;
+      }
+      .eyebrow {
+        font-size: 14px;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 0.22em;
+        color: #a9adb2;
+      }
+      .hero h1,
+      .display {
+        font-size: clamp(4.2rem, 10vw, 9.5rem);
+        line-height: 0.84;
+        letter-spacing: -0.065em;
+        margin: 22px 0;
+        font-weight: 500;
+      }
+      .serif {
+        font-family: "Instrument Serif", serif;
+        font-style: italic;
+        color: #ff9147;
+        font-weight: 400;
+      }
+      .hero p {
+        max-width: 570px;
+        margin: 34px auto;
+        color: var(--muted);
+        font-size: 18px;
+        line-height: 1.7;
+      }
+      .down {
+        position: absolute;
+        bottom: 28px;
+        color: #777;
+        animation: float 2s infinite;
+      }
+      @keyframes float {
+        50% {
+          transform: translateY(8px);
+        }
+      }
+      section {
+        padding: 150px 7vw;
+      }
+      .wrap {
+        max-width: 1180px;
+        margin: auto;
+      }
+      .section-title {
+        font-size: clamp(3rem, 7vw, 7rem);
+        line-height: 1;
+        letter-spacing: -0.055em;
+        font-weight: 300;
+        max-width: 1000px;
+      }
+      .orange {
+        color: #ff9147;
+      }
+      .journey {
+        position: relative;
+        margin-top: 100px;
+      }
+      .journey:before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 0;
+        bottom: 0;
+        width: 1px;
+        background: linear-gradient(var(--orange), #ffffff33, transparent);
+      }
+      .step {
+        width: 50%;
+        padding: 10px 70px 100px;
+        position: relative;
+      }
+      .step:nth-child(even) {
+        margin-left: 50%;
+      }
+      .step:nth-child(odd) {
+        text-align: right;
+      }
+      .step:before {
+        content: "";
+        position: absolute;
+        width: 11px;
+        height: 11px;
+        border: 1px solid var(--orange);
+        background: var(--bg);
+        border-radius: 50%;
+        top: 18px;
+        box-shadow: 0 0 15px #ff7a1a88;
+      }
+      .step:nth-child(odd):before {
+        right: -6px;
+      }
+      .step:nth-child(even):before {
+        left: -6px;
+      }
+      .step small {
+        color: #555;
+      }
+      .step h3 {
+        font-size: 56px;
+        margin: 8px 0;
+        font-weight: 400;
+        letter-spacing: -0.04em;
+      }
+      .step p {
+        color: var(--muted);
+        line-height: 1.65;
+        font-size: 16px;
+      }
+      .split {
+        background: #ffffff07;
+        border-top: 1px solid #ffffff14;
+        border-bottom: 1px solid #ffffff14;
+      }
+      .grid2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 90px;
+        align-items: end;
+      }
+      .copy {
+        color: var(--muted);
+        font-size: 21px;
+        line-height: 1.75;
+      }
+      .trace {
+        max-width: 760px;
+        margin: 90px auto 0;
+      }
+      .trace div {
+        border-top: 1px solid #ffffff18;
+        padding: 25px 0;
+        display: grid;
+        grid-template-columns: 70px 1fr auto;
+        align-items: center;
+        transition: 0.3s;
+      }
+      .trace div:last-child {
+        border-bottom: 1px solid #ffffff18;
+      }
+      .trace div:hover {
+        color: var(--orange);
+        padding-left: 10px;
+      }
+      .trace b {
+        font-size: 34px;
+        font-weight: 400;
+      }
+      .trace span {
+        color: #666;
+        font-size: 13px;
+      }
+      .paper {
+        background: var(--paper);
+        color: #111315;
+      }
+      .paper .section-title {
+        font-size: clamp(4rem, 8vw, 8rem);
+      }
+      .paper-copy {
+        max-width: 620px;
+        margin: 70px 0 0 auto;
+        color: #555;
+        font-size: 21px;
+        line-height: 1.75;
+      }
+      .constellation {
+        height: 560px;
+        position: relative;
+        margin-top: 40px;
+      }
+      .path {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+      }
+      .pill {
+        position: absolute;
+        border: 1px solid #ffffff1c;
+        background: #ffffff0a;
+        padding: 13px 18px;
+        border-radius: 999px;
+        color: #bbb;
+        transition: 0.3s;
+        backdrop-filter: blur(8px);
+      }
+      .pill:hover {
+        transform: scale(1.07);
+        border-color: #ff7a1a99;
+        color: #fff;
+      }
+      .p1 {
+        left: 5%;
+        top: 23%;
+      }
+      .p2 {
+        left: 72%;
+        top: 13%;
+      }
+      .p3 {
+        left: 17%;
+        top: 68%;
+      }
+      .p4 {
+        left: 78%;
+        top: 68%;
+      }
+      .p5 {
+        left: 45%;
+        top: 12%;
+      }
+      .p6 {
+        left: 52%;
+        top: 77%;
+      }
+      .p7 {
+        left: 4%;
+        top: 47%;
+      }
+      .p8 {
+        left: 70%;
+        top: 43%;
+      }
+      .final {
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        text-align: center;
+        border-top: 1px solid #ffffff14;
+        position: relative;
+      }
+      .final p {
+        max-width: 560px;
+        margin: 32px auto;
+        color: var(--muted);
+        font-size: 18px;
+        line-height: 1.7;
+      }
+      .button {
+        display: inline-block;
+        margin-top: 18px;
+        padding: 15px 25px;
+        border-radius: 999px;
+        background: var(--text);
+        color: #111;
+        text-decoration: none;
+        font-weight: 600;
+      }
+      .button:hover {
+        background: var(--orange);
+      }
+      footer {
+        border-top: 1px solid #ffffff14;
+        padding: 30px 5vw;
+        display: flex;
+        justify-content: space-between;
+        color: #92979d;
+        font-size: 14px;
+      }
+      .reveal {
+        opacity: 0;
+        transform: translateY(30px);
+        transition:
+          opacity 0.9s,
+          transform 0.9s;
+      }
+      .reveal.on {
+        opacity: 1;
+        transform: none;
+      }
+      @media (max-width: 720px) {
+        .navlinks {
+          display: none;
+        }
+        section {
+          padding: 110px 7vw;
+        }
+        .grid2 {
+          grid-template-columns: 1fr;
+          gap: 30px;
+        }
+        .journey:before {
+          left: 10px;
+        }
+        .step,
+        .step:nth-child(even) {
+          width: 100%;
+          margin-left: 0;
+          text-align: left;
+          padding: 0 0 80px 50px;
+        }
+        .step:nth-child(odd):before,
+        .step:nth-child(even):before {
+          left: 5px;
+          right: auto;
+        }
+        .step h3 {
+          font-size: 42px;
+        }
+        .constellation {
+          height: 650px;
+        }
+        .pill {
+          font-size: 12px;
+        }
+        .p2 {
+          left: 58%;
+        }
+        .p4 {
+          left: 60%;
+        }
+        .p6 {
+          left: 40%;
+        }
+        .p8 {
+          left: 52%;
+        }
+        footer {
+          flex-direction: column;
+          gap: 10px;
+        }
+      }
 
-/* Final BuildSparks trajectory tuning */
-.constellation .path{opacity:.92}
-.constellation .path path{stroke:#ff8a3d;stroke-opacity:.96;stroke-width:3;vector-effect:non-scaling-stroke;filter:drop-shadow(0 0 3px rgba(255,138,61,.38))}
-@media screen and (max-width:767px){.constellation .path{opacity:1}.constellation .path path{stroke-opacity:1;stroke-width:3.2}}
-</style></head><body><div class="progress"></div><nav class="nav" id="nav"><a href="#top" class="brand">BuildSparks<span class="dot">.</span></a><div class="navlinks"><a href="#journey">Journey</a><a href="#traces">Traces</a><a href="#paths">Paths</a></div></nav>
-<header id="top" class="hero"><div class="glow"></div><div style="z-index:1"><div class="spark"></div><div class="eyebrow" style="font-size:13px;font-weight:400;letter-spacing:.27em;color:#999ea4">SEE WHERE IT GOES.</div><h1>Build on<br><span class="serif">your spark.</span></h1><p>Every meaningful journey begins with a flicker of curiosity. What matters is what you choose to build from it.</p></div><div class="down">↓</div></header>
-<section id="journey"><div class="wrap"><div class="eyebrow orange reveal">The journey</div><h2 class="section-title reveal">A small question can become <span class="serif">a direction.</span></h2><div class="journey"><div class="step reveal"><small>01</small><h3>Spark</h3><p>Notice the question that stays with you.</p></div><div class="step reveal"><small>02</small><h3>Explore</h3><p>Follow it beyond the obvious answer.</p></div><div class="step reveal"><small>03</small><h3>Build</h3><p>Give the idea form through practice and making.</p></div><div class="step reveal"><small>04</small><h3>Share</h3><p>Let the work meet the world and change through it.</p></div><div class="step reveal"><small>05</small><h3>Grow</h3><p>See what the journey reveals about what comes next.</p></div></div></div></section>
-<section class="split"><div class="wrap grid2"><div><div class="eyebrow orange reveal">What happens next matters</div><h2 class="section-title reveal">Ideas do not arrive <span class="serif">finished.</span></h2></div><p class="copy reveal">They become clearer through attention. Stronger through practice. More useful through sharing. A spark becomes a skill. A skill becomes a project. A project creates impact. Impact becomes a story worth carrying forward.</p></div></section>
-<section id="traces"><div class="wrap"><div style="text-align:center"><div class="eyebrow orange reveal">Growth leaves traces</div><h2 class="section-title reveal" style="margin:25px auto">Becoming is built<br><span class="serif">one step at a time.</span></h2></div><div class="trace"><div class="reveal"><span>01</span><b>A question</b><i>↗</i></div><div class="reveal"><span>02</span><b>An experiment</b><i>↗</i></div><div class="reveal"><span>03</span><b>A project</b><i>↗</i></div><div class="reveal"><span>04</span><b>A passion</b><i>↗</i></div><div class="reveal"><span>05</span><b>A direction</b><i>↗</i></div></div></div></section>
-<section class="paper"><div class="wrap"><div class="eyebrow orange reveal">A different measure of progress</div><h2 class="section-title reveal">The goal is not a list of achievements.<br><span class="serif">The goal is becoming.</span></h2><p class="paper-copy reveal">Not collecting activities. Not chasing milestones. Not performing someone else's version of progress. But staying with an interest long enough to discover what it can teach you, what it can change, and where it might lead.</p></div></section>
-<section id="paths"><div class="wrap"><div style="text-align:center"><div class="eyebrow orange reveal">No single path</div><h2 class="section-title reveal" style="margin:24px auto">Every spark is different.</h2><p class="copy reveal" style="max-width:550px;margin:auto">Your path does not need to look familiar to be meaningful.</p></div><div class="constellation"><svg class="path" viewBox="0 0 1000 500" preserveAspectRatio="none"><path d="M50 280 C190 70 300 420 460 240 S700 80 950 300" fill="none" stroke="#ff7a1a" stroke-opacity=".35" stroke-dasharray="4 8"/></svg><div class="pill p1">Technology</div><div class="pill p2">Research</div><div class="pill p3">Writing</div><div class="pill p4">Music</div><div class="pill p5">Art</div><div class="pill p6">Community</div><div class="pill p7">Learning</div><div class="pill p8">Something yours</div></div></div></section>
-<section class="final"><div class="glow"></div><div style="z-index:1" class="reveal"><div class="spark"></div><h2 class="display">See where your<br><span class="serif">spark can take you.</span></h2><p>Notice it. Follow it. Build on it. The next chapter rarely announces itself. Sometimes it begins as a question you cannot stop asking.</p><a class="button" href="#top">Begin again ↗</a></div></section><footer><b style="color:white">BuildSparks<span class="dot">.</span></b><span>Build on your spark.</span><span>© <span id="year"></span> BuildSparks</span></footer><script>const nav=document.getElementById('nav'),paper=document.querySelector('.paper');function navTone(){const r=paper.getBoundingClientRect(),y=34;nav.classList.toggle('on-paper',r.top<=y&&r.bottom>=y)};addEventListener('scroll',navTone,{passive:true});addEventListener('resize',navTone);navTone();const bar=document.querySelector('.progress');addEventListener('scroll',()=>bar.style.width=(scrollY/(document.body.scrollHeight-innerHeight)*100)+'%');const io=new IntersectionObserver(es=>es.forEach(e=>e.isIntersecting&&e.target.classList.add('on')),{threshold:.12});document.querySelectorAll('.reveal').forEach(x=>io.observe(x));document.getElementById('year').textContent=new Date().getFullYear();</script></body></html>
+      /* Final BuildSparks trajectory tuning */
+      .constellation .path {
+        opacity: 0.92;
+      }
+      .constellation .path path {
+        stroke: #ff8a3d;
+        stroke-opacity: 0.96;
+        stroke-width: 3;
+        vector-effect: non-scaling-stroke;
+        filter: drop-shadow(0 0 3px rgba(255, 138, 61, 0.38));
+      }
+      @media screen and (max-width: 767px) {
+        .constellation .path {
+          opacity: 1;
+        }
+        .constellation .path path {
+          stroke-opacity: 1;
+          stroke-width: 3.2;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="progress"></div>
+    <nav class="nav" id="nav">
+      <a href="#top" class="brand">BuildSparks<span class="dot">.</span></a>
+      <div class="navlinks">
+        <a href="#journey">Journey</a><a href="#traces">Traces</a
+        ><a href="#paths">Paths</a>
+      </div>
+    </nav>
+    <header id="top" class="hero">
+      <div class="glow"></div>
+      <div style="z-index: 1">
+        <div class="spark"></div>
+        <div
+          class="eyebrow"
+          style="
+            font-size: 13px;
+            font-weight: 400;
+            letter-spacing: 0.27em;
+            color: #999ea4;
+          "
+        >
+          SEE WHERE IT GOES.
+        </div>
+        <h1>Build on<br /><span class="serif">your spark.</span></h1>
+        <p>
+          Every meaningful journey begins with a flicker of curiosity. What
+          matters is what you choose to build from it.
+        </p>
+      </div>
+      <div class="down">↓</div>
+    </header>
+    <section id="journey">
+      <div class="wrap">
+        <div class="eyebrow orange reveal">The journey</div>
+        <h2 class="section-title reveal">
+          A small question can become <span class="serif">a direction.</span>
+        </h2>
+        <div class="journey">
+          <div class="step reveal">
+            <small>01</small>
+            <h3>Spark</h3>
+            <p>Notice the question that stays with you.</p>
+          </div>
+          <div class="step reveal">
+            <small>02</small>
+            <h3>Explore</h3>
+            <p>Follow it beyond the obvious answer.</p>
+          </div>
+          <div class="step reveal">
+            <small>03</small>
+            <h3>Build</h3>
+            <p>Give the idea form through practice and making.</p>
+          </div>
+          <div class="step reveal">
+            <small>04</small>
+            <h3>Share</h3>
+            <p>Let the work meet the world and change through it.</p>
+          </div>
+          <div class="step reveal">
+            <small>05</small>
+            <h3>Grow</h3>
+            <p>See what the journey reveals about what comes next.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="split">
+      <div class="wrap grid2">
+        <div>
+          <div class="eyebrow orange reveal">What happens next matters</div>
+          <h2 class="section-title reveal">
+            Ideas do not arrive <span class="serif">finished.</span>
+          </h2>
+        </div>
+        <p class="copy reveal">
+          They become clearer through attention. Stronger through practice. More
+          useful through sharing. A spark becomes a skill. A skill becomes a
+          project. A project creates impact. Impact becomes a story worth
+          carrying forward.
+        </p>
+      </div>
+    </section>
+    <section id="traces">
+      <div class="wrap">
+        <div style="text-align: center">
+          <div class="eyebrow orange reveal">Growth leaves traces</div>
+          <h2 class="section-title reveal" style="margin: 25px auto">
+            Becoming is built<br /><span class="serif"
+              >one step at a time.</span
+            >
+          </h2>
+        </div>
+        <div class="trace">
+          <div class="reveal"><span>01</span><b>A question</b><i>↗</i></div>
+          <div class="reveal"><span>02</span><b>An experiment</b><i>↗</i></div>
+          <div class="reveal"><span>03</span><b>A project</b><i>↗</i></div>
+          <div class="reveal"><span>04</span><b>A passion</b><i>↗</i></div>
+          <div class="reveal"><span>05</span><b>A direction</b><i>↗</i></div>
+        </div>
+      </div>
+    </section>
+    <section class="paper">
+      <div class="wrap">
+        <div class="eyebrow orange reveal">A different measure of progress</div>
+        <h2 class="section-title reveal">
+          The goal is not a list of achievements.<br /><span class="serif"
+            >The goal is becoming.</span
+          >
+        </h2>
+        <p class="paper-copy reveal">
+          Not collecting activities. Not chasing milestones. Not performing
+          someone else's version of progress. But staying with an interest long
+          enough to discover what it can teach you, what it can change, and
+          where it might lead.
+        </p>
+      </div>
+    </section>
+    <section id="paths">
+      <div class="wrap">
+        <div style="text-align: center">
+          <div class="eyebrow orange reveal">No single path</div>
+          <h2 class="section-title reveal" style="margin: 24px auto">
+            Every spark is different.
+          </h2>
+          <p class="copy reveal" style="max-width: 550px; margin: auto">
+            Your path does not need to look familiar to be meaningful.
+          </p>
+        </div>
+        <div class="constellation">
+          <svg class="path" viewBox="0 0 1000 500" preserveAspectRatio="none">
+            <path
+              d="M50 280 C190 70 300 420 460 240 S700 80 950 300"
+              fill="none"
+              stroke="#ff7a1a"
+              stroke-opacity=".35"
+              stroke-dasharray="4 8"
+            />
+          </svg>
+          <div class="pill p1">Technology</div>
+          <div class="pill p2">Research</div>
+          <div class="pill p3">Writing</div>
+          <div class="pill p4">Music</div>
+          <div class="pill p5">Art</div>
+          <div class="pill p6">Community</div>
+          <div class="pill p7">Learning</div>
+          <div class="pill p8">Something yours</div>
+        </div>
+      </div>
+    </section>
+    <section class="final">
+      <div class="glow"></div>
+      <div style="z-index: 1" class="reveal">
+        <div class="spark"></div>
+        <h2 class="display">
+          See where your<br /><span class="serif">spark can take you.</span>
+        </h2>
+        <p>
+          Notice it. Follow it. Build on it. The next chapter rarely announces
+          itself. Sometimes it begins as a question you cannot stop asking.
+        </p>
+        <a class="button" href="#top">Begin again ↗</a>
+      </div>
+    </section>
+    <footer>
+      <b style="color: white">BuildSparks<span class="dot">.</span></b
+      ><span>Build on your spark.</span
+      ><span>© <span id="year"></span> BuildSparks</span>
+    </footer>
+    <script>
+      const nav = document.getElementById("nav"),
+        paper = document.querySelector(".paper");
+      function navTone() {
+        const r = paper.getBoundingClientRect(),
+          y = 34;
+        nav.classList.toggle("on-paper", r.top <= y && r.bottom >= y);
+      }
+      addEventListener("scroll", navTone, { passive: true });
+      addEventListener("resize", navTone);
+      navTone();
+      const bar = document.querySelector(".progress");
+      addEventListener(
+        "scroll",
+        () =>
+          (bar.style.width =
+            (scrollY / (document.body.scrollHeight - innerHeight)) * 100 + "%"),
+      );
+      const io = new IntersectionObserver(
+        (es) =>
+          es.forEach((e) => e.isIntersecting && e.target.classList.add("on")),
+        { threshold: 0.12 },
+      );
+      document.querySelectorAll(".reveal").forEach((x) => io.observe(x));
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
