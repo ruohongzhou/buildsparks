@@ -530,16 +530,15 @@
           font-size: min(2.85rem, 11.2vw);
           line-height: 0.98;
         }
-        /* These rows are a sequence, not a menu. The arrow stays on the button. */
         .trace div {
-          grid-template-columns: 2.15rem 1fr;
+          grid-template-columns: 2.15rem 1fr auto;
           padding: 18px 0;
+        }
+        .trace b {
+          font-size: 30px;
         }
         .trace span {
           color: #8d939a;
-        }
-        .trace .arrow {
-          display: none;
         }
       }
 
